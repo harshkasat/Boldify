@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gmail Bold Subject Line Generator</title>
+    <style>
+      body {
+        width: 320px;
+        border-radius: 12px; 
+        padding: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        margin: 0;
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        overflow: hidden;
+      }
+      h2 {
+        color: #ffffff;
+        margin-top: 0;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #a0a0a0;
+        font-size: 13px;
+      }
+      textarea {
+        width: 100%;
+        height: 70px;
+        margin-bottom: 12px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        border-radius: 6px;
+        resize: none;
+        font-size: 14px;
+        background-color: #252525;
+        color: #e0e0e0;
+        transition: border-color 0.2s;
+      }
+      textarea:focus {
+        outline: none;
+        border-color: #4285f4;
+      }
+      #output {
+        width: 100%;
+        min-height: 50px;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #333;
+        border-radius: 6px;
+        background-color: #252525;
+        font-size: 14px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        font-family: "Segoe UI Symbol", "Arial Unicode MS", "Noto Sans",
+          sans-serif;
+        color: #e0e0e0;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+      button {
+        background-color: #252525;
+        color: #e0e0e0;
+        border: 1px solid #444;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        flex-grow: 1;
+        margin: 0 5px;
+        transition: all 0.2s;
+      }
+      button:first-child {
+        margin-left: 0;
+      }
+      button:last-child {
+        margin-right: 0;
+      }
+      button:hover {
+        background-color: #333;
+        border-color: #555;
+      }
+      button#copyBtn {
+        background-color: #e9c46a;
+        color: #1e1e1e;
+        border: none;
+      }
+      button#copyBtn:hover {
+        background-color: #f1cc76;
+      }
+      .success-message {
+        color: #4ade80;
+        font-size: 13px;
+        margin-top: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-weight: 500;
+      }
+      .status-text {
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+        margin-top: 12px;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .logo {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border-radius: 4px;
+        background-image: url("./images/logo-image.jpg"); /* or use full path if not in same folder */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .title {
+        flex-grow: 1;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"></div>
+      <div class="title">Gmail Bold Subject</div>
+    </div>
+
+    <label for="inputText">Enter your text</label>
+    <textarea
+      id="inputText"
+      placeholder="Type your subject line here..."
+    ></textarea>
+
+    <label for="output">Bold output</label>
+    <div id="output">Your bold text will appear here</div>
+
+    <div class="button-container">
+      <button id="convertBtn">Convert</button>
+      <button id="copyBtn">Copy to Clipboard</button>
+    </div>
+
+    <div id="successMessage" class="success-message">Copied to clipboard!</div>
+    <div class="status-text">
+      Paste into Gmail subject line for bold text effect
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

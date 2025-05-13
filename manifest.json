@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Bold Subject Line Generator",
+  "version": "1.0",
+  "description": "Converts text to Unicode bold characters for Gmail subject lines",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon48.jpg",
+      "48": "images/icon48.jpg",
+      "128": "images/icon48.jpg"
+    }
+  },
+  "permissions": ["clipboardWrite"],
+  "icons": {
+    "16": "images/icon48.jpg",
+    "48": "images/icon48.jpg",
+    "128": "images/icon48.jpg"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
