@@ -18,7 +18,6 @@ Boldify provides a quick and easy way to style text using bold Unicode character
 * [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Code Details](#code-details)
 * [License](#license)
 
 
@@ -42,31 +41,8 @@ Boldify provides a quick and easy way to style text using bold Unicode character
   The application also automatically converts the text as you type, with a slight delay to improve performance.
 
 
-**7. Code Details**
 
-The core functionality lies within `popup.js`.  The `convertToBold` function is central to the conversion process:
-
-```javascript
-function convertToBold(text) {
-  if (!text) return "";
-  try {
-    return text
-      .split("")
-      .map((char) => boldMap[char] || char)
-      .join("");
-  } catch (error) {
-    console.error("Error converting text to bold:", error);
-    return text; 
-  }
-}
-```
-
-This function uses a `boldMap` object which maps standard characters to their bold Unicode counterparts.  If a character is not found in the map, the original character is returned.  Error handling is included to prevent crashes.
-
-Event listeners handle button clicks and input changes, updating the output and providing user feedback.
-
-
-**8. License**
+**7. License**
 
 [Determine the license from the repository.]
 
